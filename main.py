@@ -15,6 +15,10 @@ from pygame.sprite import Group
 import random
 from settings import *
 from sprites import *
+'''
+importing game sprites and random function
+Activating sprites and random 
+'''
 
 class Game:
     def __init__(self):
@@ -25,7 +29,10 @@ class Game:
         pg.display.set_caption(TITLE)
         self.clock = pg.time.Clock()
         self.running = True
-
+'''
+Creates game windown and sets the measurments
+INITIALIZES game clock
+'''
     def new(self):
         # start a new game
         self.all_sprites = Group()
@@ -46,7 +53,10 @@ class Game:
         #     self.all_sprites.add(plat)
         #     self.platforms.add(plat)
         self.run()
-
+'''
+Creates player sprite within game window
+Ground is added to the program
+'''
 
     def run(self):
         # Game Loop
