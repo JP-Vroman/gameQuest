@@ -1,4 +1,5 @@
 
+# This code was created by JP Vroman, with substantial assistence 
 # Sprite classes for platform game
 # © 2019 KidsCanCode LLC / All rights reserved.
 # mr cozort planted a landmine by importing Sprite directly...
@@ -7,6 +8,8 @@ from pygame.sprite import Sprite
 from settings import *
 vec = pg.math.Vector2
 
+#Creates game sprite
+#Imports the vector format within code
 class Player(Sprite):
     # include game parameter to pass game class as argument in main...
     def __init__(self, game):
@@ -42,6 +45,11 @@ class Player(Sprite):
         if keys[pg.K_SPACE]:
             self.jump()
 
+        '''
+        Allowing player to manipulate the game avatar
+        Uses keyboard to control the onscreen player
+        
+        '''
         # apply friction
         self.acc.x += self.vel.x * PLAYER_FRICTION
         # self.acc.y += self.vel.y * PLAYER_FRICTION
